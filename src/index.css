@@ -1,0 +1,106 @@
+/* @import MUST COME FIRST - before any @tailwind directives */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Then Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System - Afnan Khalifa Website Clone */
+
+@layer base {
+  :root {
+    /* Burgundy Background like DM card */
+    --background: 350 52% 28%;
+    --foreground: 40 70% 55%;
+
+    /* Cards */
+    --card: 30 33% 95%;
+    --card-foreground: 0 0% 8%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    /* Primary - Dark Black */
+    --primary: 0 0% 8%;
+    --primary-foreground: 30 33% 95%;
+
+    /* Secondary - Light Gray */
+    --secondary: 30 20% 90%;
+    --secondary-foreground: 0 0% 8%;
+
+    /* Burgundy/Maroon Accent - Dark like reference */
+    --accent: 350 45% 18%;
+    --accent-foreground: 30 20% 90%;
+
+    /* Muted */
+    --muted: 30 20% 88%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border */
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 0 0% 8%;
+
+    --radius: 0.5rem;
+
+    /* Custom Colors */
+    --cream: 30 33% 95%;
+    --cream-dark: 30 25% 90%;
+    --burgundy: 350 52% 32%;
+    --gold: 40 70% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-script {
+    font-family: "Dancing Script", cursive;
+  }
+
+  .font-serif {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-sans {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-8 py-4 font-semibold tracking-wide uppercase text-sm transition-all duration-300 hover:opacity-90;
+  }
+
+  .section-padding {
+    @apply px-6 py-16 md:px-12 lg:px-24 lg:py-24;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+}

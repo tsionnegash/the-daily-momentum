@@ -50,13 +50,11 @@ _(Update this link after deploying on Vercel/Netlify)_
 ![Website Preview](https://via.placeholder.com/1200x800/800020/FFD700?text=Website+Preview)  
 _(Add real screenshots here later)_
 
-## 🤝 Connect With Me
+## 🤝 Connect With Me 
 
-- YouTube: [@itsyidi](https://www.youtube.com/@itsyidi)
-- TikTok: [@itsmeyidi](https://www.tiktok.com/@itsmeyidi)
-- Instagram: [@itsmeyidi](https://instagram.com/itsmeyidi)
-- LinkedIn: [Tsion Negash](https://www.linkedin.com/in/yididyafantahun/)
-- Telegram Community: [Join Here](https://t.me/theDailyMomentum)
+- YouTube: @tsita-v4u
+- LinkedIn: [Tsion Negash][(https://www.linkedin.com/in/tsionnegash/)]
+- Telegram Community: [Join Here]t.me/tsipathway. 
 
 ---
 

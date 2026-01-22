@@ -1,105 +1,87 @@
 const WhatYouLearnSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-[#5d222a]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Title - Left */}
+          {/* Sticky Title - Left - Now golden */}
           <div className="lg:sticky lg:top-24">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold italic leading-tight">
-              📌 Is This Coaching Program For YOU?
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold italic leading-tight text-[#E8C547]">
+              1:1 Coaching — Personal Development, Personalized
             </h2>
           </div>
 
-          {/* Content - Right - Back to original, moderate font sizes */}
-          <div className="space-y-8">
-            <p className="text-base md:text-lg leading-relaxed">
-              Let’s cut the fluff—answer these questions honestly:
+          {/* Interactive Accordion Content - Right */}
+          <div className="space-y-6">
+            <p className="text-base md:text-lg leading-relaxed text-[#ebebeb]/90">
+              My 1:1 coaching is for people who know they want more from life —
+              but feel stuck, overwhelmed, or unsure where to start.
             </p>
 
-            <div className="space-y-5">
-              <p className="text-base md:text-lg leading-relaxed">
-                • Do you often start strong on goals… but procrastination creeps
-                in and kills your momentum?
-              </p>
+            <p className="text-base md:text-lg leading-relaxed text-[#ebebeb]/90">
+              This is not motivational talk or one-size-fits-all advice. It’s a
+              personalized development space where we work together on the areas
+              of your life that matter most right now.
+            </p>
 
-              <p className="text-base md:text-lg leading-relaxed">
-                • Are you tired of feeling inconsistent, even though you know
-                you’re capable of so much more?
-              </p>
+            {/* Main Interactive Accordion - DARK MAROON BACKGROUND */}
+            <div className="space-y-4 mt-8">
+              <details className="group rounded-lg border border-[#ebebeb]/20 bg-[#5d222a]/90 text-[#ebebeb] overflow-hidden transition-all duration-300">
+                <summary className="flex justify-between items-center cursor-pointer p-5 text-lg md:text-xl font-semibold hover:bg-[#4a1a22] transition-colors">
+                  <span>What we focus on in sessions</span>
+                  <span className="text-xl transition-transform duration-300 group-open:rotate-180 text-[#E8C547]">
+                    ▼
+                  </span>
+                </summary>
+                <div className="px-5 pb-5 pt-2 text-[#ebebeb]/90">
+                  <ul className="space-y-3 list-disc pl-5 marker:text-[#ebebeb]/70 text-base md:text-lg leading-relaxed">
+                    <li>Building clarity around your goals and direction</li>
+                    <li>
+                      Creating structure and discipline that fits your real life
+                    </li>
+                    <li>
+                      Developing consistency in habits, mindset, and
+                      decision-making
+                    </li>
+                    <li>
+                      Strengthening internal growth (mental, physical, and
+                      spiritual)
+                    </li>
+                    <li>
+                      Improving external areas such as relationships, finances,
+                      and independence
+                    </li>
+                  </ul>
+                </div>
+              </details>
 
-              <p className="text-base md:text-lg leading-relaxed">
-                • Do you crave real discipline and next-level productivity, but
-                struggle to make it stick on your own?
-              </p>
-
-              <p className="text-base md:text-lg leading-relaxed">
-                • Have you tried apps, books, or random routines—yet still lack
-                a clear, structured plan that actually works for YOUR life?
-              </p>
-
-              <p className="text-base md:text-lg leading-relaxed">
-                • Are you finally ready to stop spinning your wheels and make
-                serious, measurable progress toward your biggest goals?
-              </p>
+              <details className="group rounded-lg border border-[#ebebeb]/20 bg-[#5d222a]/90 text-[#ebebeb] overflow-hidden transition-all duration-300">
+                <summary className="flex justify-between items-center cursor-pointer p-5 text-lg md:text-xl font-semibold hover:bg-[#4a1a22] transition-colors">
+                  <span>How the process actually works</span>
+                  <span className="text-xl transition-transform duration-300 group-open:rotate-180 text-[#E8C547]">
+                    ▼
+                  </span>
+                </summary>
+                <div className="px-5 pb-5 pt-2 space-y-4 text-base md:text-lg leading-relaxed text-[#ebebeb]/90">
+                  <p>
+                    I work with you to identify what’s holding you back — not
+                    just on the surface, but at the root — and help you build
+                    practical systems to move forward with confidence.
+                  </p>
+                  <p>
+                    This coaching is especially for those who feel like they’ve
+                    been trying on their own for a long time, and are ready for
+                    guided growth, accountability, and honest conversations.
+                  </p>
+                </div>
+              </details>
             </div>
 
-            <p className="text-base md:text-lg leading-relaxed mt-8">
-              If you nodded <span className="font-bold">“yes”</span> to even{" "}
-              <span className="font-bold">one</span> of these → this program is
-              built for you.
-            </p>
-
-            <p className="text-base md:text-lg leading-relaxed">
-              This is perfect for ambitious people who:
-            </p>
-
-            <div className="space-y-5">
-              <div className="flex items-start gap-4">
-                <span className="text-2xl mt-1">✔️</span>
-                <p className="text-base md:text-lg leading-relaxed">
-                  Battle{" "}
-                  <span className="font-bold">
-                    procrastination and inconsistency
-                  </span>{" "}
-                  daily
-                </p>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <span className="text-2xl mt-1">✔️</span>
-                <p className="text-base md:text-lg leading-relaxed">
-                  Want to unlock{" "}
-                  <span className="font-bold">unbreakable discipline</span> and
-                  skyrocket their productivity
-                </p>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <span className="text-2xl mt-1">✔️</span>
-                <p className="text-base md:text-lg leading-relaxed">
-                  Need a{" "}
-                  <span className="font-bold">
-                    proven structure, clear plan, and real accountability
-                  </span>{" "}
-                  to stay on track
-                </p>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <span className="text-2xl mt-1">✔️</span>
-                <p className="text-base md:text-lg leading-relaxed">
-                  Are <span className="font-bold">100% ready</span> to invest in
-                  themselves and finally turn ambition into results
-                </p>
-              </div>
-            </div>
-
-            <p className="text-base md:text-lg leading-relaxed mt-8">
-              If you’ve been feeling{" "}
-              <span className="font-bold">
-                stuck, drained, unmotivated, overwhelmed, or just directionless
-              </span>
-              —this isn’t another quick fix.
+            {/* Final powerful statement - always visible */}
+            <p className="text-xl md:text-2xl font-semibold italic text-center md:text-left mt-12 border-t border-[#ebebeb]/20 pt-10 text-[#ebebeb]">
+              The goal isn’t to fix you.
+              <br />
+              The goal is to help you develop the skills, clarity, and
+              self-trust to lead your own life well.
             </p>
           </div>
         </div>

@@ -1,131 +1,79 @@
-const programs = [
-  {
-    title: "1:1 Coaching Program",
-    features: [
-      "3 times a week, 1.30 hours each session",
-      "Will last for 3 months (3-month lock-in)",
-      "Deep and targeted transformation",
-      "Direct access with me (Text, Video Calls, Emails, etc)",
-      "Deep chat and follow-ups",
-      "Full free access to all resources and materials",
-      "Personalized guides and programs",
-      "Free Journal book or Planner",
-    ],
-    highlighted: true,
-  },
-  {
-    title: "Membership Coaching Program (5-7 members only)",
-    subtitle: "Currently Closed!",
-    features: [
-      "2 times a week, 1 hour each session",
-      "Will last for 1 month only. (If needed, it can continue)",
-      "Group discussion and guidance",
-      "Access to the dedicated group for chatting and communicating, including me.",
-      "Boost your confidence by interacting with one another",
-      "Every week, follow-ups and new challenges",
-    ],
-    highlighted: false,
-  },
-];
+import { motion } from "framer-motion";
 
 const CoachingMethodsSection = () => {
   return (
-    <section className="section-padding bg-[#6b112e]">
+    <section className="section-padding bg-[#5d222a]">
       <div className="container-wide">
+        {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-2xl mb-6">
-            Are You Ready?
+          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold drop-shadow-xl mb-6 text-[#E8C547]">
+            new things are coming sooon...
           </h2>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            Choose the coaching method that will finally help you break through
-            procrastination, build unbreakable discipline, and transform your
-            life.
+          <p className="text-xl md:text-2xl text-[#ebebeb]/90 max-w-3xl mx-auto">
+            A powerful community is being built a place where people show up
+            daily, support each other, stay accountable, and grow stronger
+            together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {programs.map((program, index) => (
-            <div
-              key={index}
-              className={`group relative h-full [perspective:1200px] cursor-pointer ${
-                program.highlighted ? "lg:scale-110" : ""
-              }`}
+        {/* Coming Soon Card with Beating Heart */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-4xl mx-auto text-center py-20 px-8 md:px-16 bg-[#ebebeb]/10 backdrop-blur-lg rounded-3xl border border-[#E8C547]/30 shadow-2xl"
+        >
+          {/* Beating Heart */}
+          <motion.div
+            className="mb-10 inline-block"
+            animate={{
+              scale: [1, 1.12, 1],
+              opacity: [0.9, 1, 0.9],
+            }}
+            transition={{
+              duration: 1.6,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <svg
+              className="w-24 h-24 md:w-32 md:h-32 mx-auto text-[#E8C547]"
+              viewBox="0 0 24 24"
+              fill="currentColor"
             >
-              <div
-                className={`relative w-full h-full transition-all duration-800 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-active:[transform:rotateY(180deg)]`}
-              >
-                {/* Front of the Card */}
-                <div className="[backface-visibility:hidden] absolute inset-0 rounded-3xl overflow-hidden shadow-2xl">
-                  <div
-                    className={`h-full flex flex-col p-10 md:p-12 rounded-3xl border-4 ${
-                      program.highlighted
-                        ? "bg-gradient-to-br from-amber-600/20 to-yellow-600/20 border-amber-400/50 backdrop-blur-sm"
-                        : "bg-white/10 border-white/20 backdrop-blur-md"
-                    }`}
-                  >
-                    {program.subtitle && (
-                      <div className="text-center mb-4">
-                        <span className="inline-block px-6 py-3 bg-red-600/80 text-white font-bold rounded-full text-lg">
-                          {program.subtitle}
-                        </span>
-                      </div>
-                    )}
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </motion.div>
 
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 drop-shadow-lg">
-                      {program.title}
-                    </h3>
+          {/* Coming Soon Title */}
+          <h3 className="text-5xl md:text-7xl font-serif font-bold text-[#E8C547] mb-8 drop-shadow-lg">
+            Coming Soon
+          </h3>
 
-                    <ul className="space-y-5 flex-1">
-                      {program.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-4">
-                          <span className="text-3xl mt-1">✅</span>
-                          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                            {feature}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
+          {/* Community Message */}
+          <p className="text-2xl md:text-3xl text-[#ebebeb] leading-relaxed mb-10">
+            The Daily Momentum Community where committed people gather every
+            day, share their progress, hold each other accountable, celebrate
+            wins, and lift each other up through tough days.
+          </p>
 
-                    <div className="mt-10 text-center">
-                      <span
-                        className={`inline-block px-8 py-4 rounded-full text-xl font-bold ${
-                          program.highlighted
-                            ? "bg-amber-500 text-[#6b112e] shadow-lg shadow-amber-400/50"
-                            : "bg-gray-600 text-white/70"
-                        }`}
-                      >
-                        {program.highlighted
-                          ? "Most Intensive"
-                          : "Currently Closed"}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+          {/* Community Quote */}
+          <blockquote className="text-xl md:text-2xl italic text-[#E8C547]/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+            "Alone we can do so little; together we can do so much."
+            <footer className="mt-4 text-lg opacity-80 not-italic">
+              — Helen Keller
+            </footer>
+          </blockquote>
 
-                {/* Back of the Card – Only for 1:1 */}
-                {program.highlighted && (
-                  <div className="[transform:rotateY(180deg)] [backface-visibility:hidden] absolute inset-0 rounded-3xl bg-white flex items-center justify-center p-12 transition-shadow duration-500 group-hover:shadow-3xl group-hover:shadow-yellow-400/70 group-active:shadow-yellow-400/90">
-                    <div className="text-center">
-                      <h3 className="text-4xl md:text-5xl font-bold text-[#6b112e] mb-8">
-                        Are You Truly Ready?
-                      </h3>
-                      <p className="text-xl md:text-2xl text-gray-800 leading-relaxed max-w-lg">
-                        This private 1:1 journey is for those who are done
-                        waiting and ready to commit to real, profound change. No
-                        more excuses. No more inconsistency. Just results.
-                      </p>
-                      <div className="mt-12">
-                        <p className="text-3xl font-bold text-amber-600">
-                          Your transformation begins now.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+          {/* Teaser Button */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block px-10 py-5 bg-[#E8C547] text-[#5d222a] font-bold text-xl rounded-full shadow-lg hover:shadow-2xl transition-all"
+          >
+            the Community Soon...
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

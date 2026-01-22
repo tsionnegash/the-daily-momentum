@@ -34,18 +34,20 @@ const programCards = [
 ];
 
 const HowItWorksSection = () => {
+  const gold = "#E8C547";
+
   return (
     <section
       className="relative section-padding overflow-hidden"
-      style={{ backgroundColor: "#6b112e" }}
+      style={{ backgroundColor: "#ebebeb" }}
     >
-      {/* Subtle festive overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-60">
+      {/* Subtle decorative overlay - adjusted for light background */}
+      <div className="absolute inset-0 pointer-events-none opacity-40">
         <div className="absolute inset-0">
           {[...Array(15)].map((_, i) => (
             <div
               key={`star-${i}`}
-              className="absolute w-1 h-1 md:w-2 md:h-2 bg-amber-100 rounded-full animate-twinkle"
+              className="absolute w-1 h-1 md:w-2 md:h-2 bg-[#5d222a]/60 rounded-full animate-twinkle"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -60,14 +62,14 @@ const HowItWorksSection = () => {
           {[...Array(6)].map((_, i) => (
             <div
               key={`gift-${i}`}
-              className="absolute text-2xl md:text-3xl animate-fall-slow drop-shadow-md"
+              className="absolute text-2xl md:text-3xl animate-fall-slow drop-shadow-sm"
               style={{
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${i * 3}s`,
                 animationDuration: `${15 + Math.random() * 10}s`,
               }}
             >
-              🎁
+              ✨
             </div>
           ))}
         </div>
@@ -75,10 +77,13 @@ const HowItWorksSection = () => {
 
       {/* Main Content */}
       <div className="relative container-wide">
-        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-white drop-shadow-2xl">
+        <h2
+          className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4"
+          style={{ color: gold }}
+        >
           📅 How the Program Works
         </h2>
-        <p className="text-center text-lg md:text-xl mb-12 max-w-3xl mx-auto text-white/90">
+        <p className="text-center text-lg md:text-xl mb-12 max-w-3xl mx-auto text-[#5d222a]/90">
           Swipe or flip each card to reveal full details on the back 👆
         </p>
 
@@ -89,9 +94,12 @@ const HowItWorksSection = () => {
               className="group h-64 [perspective:1000px] cursor-pointer"
             >
               <div className="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-active:[transform:rotateY(180deg)] group-focus:[transform:rotateY(180deg)]">
-                {/* Front of card – deep burgundy */}
-                <div className="absolute inset-0 [backface-visibility:hidden] bg-gradient-to-br from-[#7a1638] to-[#5a0f28] text-white rounded-2xl shadow-2xl flex flex-col items-center justify-center p-6 text-center border border-white/10">
-                  <p className="text-2xl md:text-3xl font-bold drop-shadow-lg">
+                {/* Front of card */}
+                <div className="absolute inset-0 [backface-visibility:hidden] bg-gradient-to-br from-[#5d222a] to-[#4a1a22] text-white rounded-2xl shadow-xl flex flex-col items-center justify-center p-6 text-center border border-white/10">
+                  <p
+                    className="text-2xl md:text-3xl font-bold drop-shadow-lg"
+                    style={{ color: gold }}
+                  >
                     {index + 1}
                   </p>
                   <h3 className="text-xl md:text-2xl font-bold mt-4 drop-shadow-md">
@@ -99,9 +107,9 @@ const HowItWorksSection = () => {
                   </h3>
                 </div>
 
-                {/* Back of card – white with golden shadow on hover/touch */}
-                <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] bg-white rounded-2xl flex items-center justify-center p-8 text-center transition-shadow duration-500 group-hover:shadow-2xl group-hover:shadow-yellow-400/50 group-active:shadow-2xl group-active:shadow-yellow-400/60">
-                  <p className="text-base md:text-lg leading-relaxed text-gray-800">
+                {/* Back of card */}
+                <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] bg-white rounded-2xl flex items-center justify-center p-8 text-center transition-shadow duration-500 group-hover:shadow-2xl group-hover:shadow-[#5d222a]/30 group-active:shadow-2xl group-active:shadow-[#5d222a]/40">
+                  <p className="text-base md:text-lg leading-relaxed text-[#5d222a]">
                     {card.back}
                   </p>
                 </div>
@@ -111,7 +119,7 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="mt-16 text-center max-w-4xl mx-auto">
-          <p className="text-xl md:text-2xl font-semibold leading-relaxed text-white drop-shadow-2xl">
+          <p className="text-xl md:text-2xl font-semibold leading-relaxed text-[#5d222a]">
             This isn’t motivation that fades.
             <br />
             This is a clear, practical system to build real discipline and
@@ -128,10 +136,10 @@ const HowItWorksSection = () => {
             opacity: 0;
           }
           15% {
-            opacity: 0.8;
+            opacity: 0.7;
           }
           85% {
-            opacity: 0.8;
+            opacity: 0.7;
           }
           100% {
             transform: translateY(100vh) rotate(360deg);

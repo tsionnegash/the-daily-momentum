@@ -1,9 +1,21 @@
+import { useState, useEffect } from "react";
 import heroLeftPanel from "@/assets/hero-left-panel.png";
 import heroCenter from "@/assets/hero-center.png";
 import heroRight from "@/assets/hero-right.png";
 import dmLogo from "@/assets/dm-logo.png";
 
 const HeroSection = () => {
+  const [videoSrc, setVideoSrc] = useState(
+    "https://www.youtube.com/embed/AUaKz8pPFgA?si=kxTTtdq329lqsI1W",
+  );
+
+  useEffect(() => {
+    const saved = localStorage.getItem("dm-hero-video-url");
+    if (saved) {
+      setVideoSrc(saved);
+    }
+  }, []);
+
   return (
     <>
       {/* Edwardian Script ITC font */}
@@ -18,8 +30,8 @@ const HeroSection = () => {
         rel="stylesheet"
       />
 
-      <section className="bg-burgundy py-12 md:py-20">
-        {/* DM Logo - circular with golden glow */}
+      <section className="bg-[#ebebeb] py-12 md:py-20">
+        {/* DM Logo - circular */}
         <div className="flex justify-center mb-6 md:mb-8 px-4">
           <div className="relative group">
             <img
@@ -27,23 +39,23 @@ const HeroSection = () => {
               alt="Daily Momentum Logo"
               className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-full
                          transition-all duration-700
-                         group-hover:shadow-2xl group-hover:shadow-gold/60
+                         group-hover:shadow-2xl group-hover:shadow-[#5d222a]/40
                          group-hover:scale-110"
             />
             <div
               className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100
                             transition-opacity duration-700
-                            shadow-2xl shadow-gold/40 blur-xl -z-10"
+                            shadow-2xl shadow-[#5d222a]/30 blur-xl -z-10"
             />
           </div>
         </div>
 
-        {/* Main Heading */}
+        {/* Main Heading - Now golden */}
         <div className="text-center mb-6 md:mb-10 px-4">
           <div className="flex items-baseline justify-center gap-2 md:gap-4">
             {/* "The" - big and strongly slanted */}
             <span
-              className="text-7xl md:text-8xl lg:text-9xl text-gold"
+              className="text-7xl md:text-8xl lg:text-9xl text-[#E8C547]"
               style={{
                 fontFamily: "'Edwardian Script ITC', cursive",
                 transform: "rotate(-34deg)",
@@ -53,7 +65,7 @@ const HeroSection = () => {
             >
               The
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight uppercase text-gold">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight uppercase text-[#E8C547]">
               Daily Momentum
             </h1>
           </div>
@@ -61,9 +73,11 @@ const HeroSection = () => {
 
         {/* Subheading */}
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 px-4">
-          <p className="text-sm md:text-base text-cream/80 leading-relaxed font-sans">
+          <p className="text-sm md:text-base text-[#5d222a]/80 leading-relaxed font-sans">
             A Life of Intention & Power Welcome to{" "}
-            <span className="font-semibold text-gold">The Daily Momentum </span>
+            <span className="font-semibold text-[#E8C547]">
+              The Daily Momentum{" "}
+            </span>
             your space to finally take full control of your life, build
             unbreakable habits, and create momentum that carries you forward
             every single day.
@@ -97,27 +111,27 @@ const HeroSection = () => {
 
         {/* Call-to-Action Section */}
         <div className="mt-20 md:mt-28 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/80 -z-10 rounded-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30 -z-10 rounded-3xl" />
 
-          {/* Main Text - "It's time to make" now in Edwardian Script ITC */}
+          {/* Main Text - Now golden */}
           <div className="text-center mb-12 relative z-10 pt-8">
             <span
-              className="text-5xl md:text-6xl lg:text-7xl block mb-2 text-gold drop-shadow-2xl"
+              className="text-5xl md:text-6xl lg:text-7xl block mb-2 text-[#E8C547] drop-shadow-xl"
               style={{ fontFamily: "'Edwardian Script ITC', cursive" }}
             >
               It's time to make
             </span>
-            <span className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-cream uppercase tracking-wide drop-shadow-2xl">
+            <span className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#E8C547] uppercase tracking-wide drop-shadow-xl">
               change in your life
             </span>
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10 pb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-              {/* YouTube Video Card */}
+              {/* YouTube Video Card – now dynamic */}
               <div className="order-1 lg:order-1">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transform transition-transform duration-700">
-                  <div className="bg-gold text-burgundy py-5 px-8 flex items-center justify-center gap-4">
+                  <div className="bg-[#5d222a] text-white py-5 px-8 flex items-center justify-center gap-4">
                     <svg
                       className="w-7 h-7 animate-bounce"
                       viewBox="0 0 24 24"
@@ -132,7 +146,7 @@ const HeroSection = () => {
                   <div className="aspect-video">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/AUaKz8pPFgA?si=kxTTtdq329lqsI1W"
+                      src={videoSrc}
                       title="My Story - Daily Momentum"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -143,13 +157,13 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Welcome Card */}
+              {/* Welcome Card - unchanged */}
               <div className="order-2 lg:order-2">
-                <div className="bg-black/70 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-gold/50 hover:border-gold hover:shadow-gold/40 hover:scale-105 transform transition-all duration-500">
-                  <h3 className="text-3xl font-serif font-bold text-gold mb-6 text-center animate-pulse">
+                <div className="bg-white/70 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-[#5d222a]/30 hover:border-[#5d222a] hover:shadow-[#5d222a]/30 hover:scale-105 transform transition-all duration-500">
+                  <h3 className="text-3xl font-serif font-bold text-[#E8C547] mb-6 text-center animate-pulse">
                     Welcome! ✨
                   </h3>
-                  <p className="text-cream text-base leading-relaxed mb-8">
+                  <p className="text-[#5d222a] text-base leading-relaxed mb-8">
                     Hi there :) Welcome to my channel! We talk about
                     self-development and productivity. My videos will inspire
                     and motivate you to become the best version of yourself.
@@ -160,7 +174,7 @@ const HeroSection = () => {
                       href="https://www.youtube.com/@itsyidi?sub_confirmation=1"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-gold text-burgundy px-6 py-3 rounded-full font-bold uppercase tracking-wider text-base hover:bg-yellow-400 hover:scale-110 hover:rotate-3 transform transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
+                      className="bg-[#5d222a] text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider text-base hover:bg-[#4a1a22] hover:scale-110 hover:rotate-3 transform transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
                     >
                       <svg
                         className="w-5 h-5"
@@ -175,7 +189,7 @@ const HeroSection = () => {
                       href="https://www.youtube.com/@itsyidi?sub_confirmation=1"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-transparent text-gold border-2 border-gold px-6 py-3 rounded-full font-bold uppercase tracking-wider text-base hover:bg-gold/20 hover:border-yellow-400 hover:scale-110 hover:-rotate-3 transform transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
+                      className="bg-transparent text-[#5d222a] border-2 border-[#5d222a] px-6 py-3 rounded-full font-bold uppercase tracking-wider text-base hover:bg-[#5d222a]/10 hover:border-[#5d222a] hover:scale-110 hover:-rotate-3 transform transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
                     >
                       <svg
                         className="w-5 h-5"
@@ -187,7 +201,7 @@ const HeroSection = () => {
                       Notifications
                     </a>
                   </div>
-                  <p className="text-cream/70 text-sm text-center mt-6">
+                  <p className="text-[#5d222a]/70 text-sm text-center mt-6">
                     Click subscribe🔔
                   </p>
                 </div>

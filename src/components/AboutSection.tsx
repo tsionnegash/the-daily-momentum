@@ -2,112 +2,117 @@ import afnanProfile from "@/assets/afnan-profile.png";
 
 const AboutSection = () => {
   return (
-    <section className="section-padding bg-background">
-      <div className="container-wide">
+    <section className="section-padding bg-[#ebebeb] py-12 md:py-20">
+      <div className="container-wide max-w-6xl mx-auto px-5 md:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="font-serif text-xl md:text-2xl mb-2">
-            Founder & Creative Director
-          </p>
-          <h2 className="font-sans text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight">
-            Behind The Daily Momentum
+        <div className="text-center mb-12 md:mb-16">
+          <h2
+            className="
+              font-serif 
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+              font-bold 
+              tracking-tight 
+              uppercase 
+              text-[#E8C547]
+            "
+            style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
+          >
+            Who I Am & Why I Started This Journey
           </h2>
-          <p className="font-serif text-2xl md:text-3xl italic mt-2">
-            where the journey back to yourself begins
-          </p>
         </div>
 
-        {/* Content Grid - Image left, text right */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-start max-w-7xl mx-auto">
-          {/* Image - Left Side - EXTRA BIG */}
-          <div className="flex justify-center lg:justify-end lg:pt-12">
-            <img
-              src={afnanProfile}
-              alt="Yididya"
-              className="w-full h-auto object-cover rounded-xl shadow-2xl lg:scale-110"
-            />
+        {/* Two-column book layout */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24">
+          {/* Left column – Photo + beginning */}
+          <div className="space-y-10">
+            <div className="flex justify-center lg:justify-start">
+              <img
+                src={afnanProfile}
+                alt="Yididya - Founder of Sinera"
+                className="w-full max-w-md lg:max-w-lg h-auto object-cover"
+              />
+            </div>
+
+            <div className="prose prose-lg md:prose-xl max-w-none space-y-6 text-[#5d222a] leading-relaxed">
+              <p className="text-[#E8C547]">
+                I started this journey from a simple place: sharing what I knew.
+              </p>
+
+              <p>
+                At first, I didn’t see it as anything special. The things
+                Italked about felt natural to me: how to structure your day, how
+                to stay disciplined, how to thinkindependently, how to move
+                forward even when life feels heavy. But as I shared more,
+                something became clear.
+              </p>
+
+              <p>
+                What felt easy to me was actually very hard for many others.
+              </p>
+
+              <p>
+                As I continued creating content, another pattern emerged: there
+                was a huge knowledge gap.
+              </p>
+            </div>
           </div>
 
-          {/* Story Content - Right Side */}
-          <div className="space-y-6 text-foreground">
-            <h4 className="font-serif text-3xl md:text-4xl font-bold mb-2">
-              Hi, I'm Yididya.
-            </h4>
-            <p className="text-lg md:text-xl italic text-muted-foreground mb-6">
-              I started The Daily Momentum from a feeling I couldn't ignore.
+          {/* Right column – Continuation */}
+          <div className="prose prose-lg md:prose-xl max-w-none space-y-6 text-[#5d222a] leading-relaxed lg:pt-20">
+            <p>
+              The same questions kept coming up about productivity,
+              independence, consistency, discipline, and direction. And slowly,
+              everything pointed to one core truth:
             </p>
 
-            <div className="space-y-6">
-              <p className="text-lg md:text-xl leading-relaxed">
-                I believe everything begins with <strong>awareness</strong>,
-                that first honest look in the mirror to see who you really are,
-                what you truly long for, and what's been whispering that you
-                can't have it. I've seen it change everything.
-              </p>
+            <p className="font-semibold italic text-xl md:text-2xl my-8 text-[#E8C547]">
+              This is personal development.
+            </p>
 
-              <p className="text-lg md:text-xl leading-relaxed">
-                So now, I walk alongside women who are ready to rebuild, to find
-                clarity in the chaos and gentle discipline that doesn't feel
-                like a punishment. We create rhythms that last, so the person
-                they keep imagining in their heart can finally, quietly, become
-                the person living their life.
-              </p>
+            <p>
+              I see personal development as a complete system made of six
+              essential areas:
+            </p>
 
-              <p className="text-lg md:text-xl leading-relaxed">
-                This isn't about hustle or a motivational high. It's about
-                building a <strong>foundation</strong> in your daily habits,
-                your quietest thoughts, your way of moving through the world. A
-                system that holds you, even on the hard days.
-              </p>
-
-              <p className="text-lg md:text-xl leading-relaxed">
-                My work extends to brands and businesses, too, helping them find
-                their human voice and real momentum. Because purpose without a
-                plan is just a dream, and a plan without purpose is just noise.
-              </p>
-
-              {/* Community Section */}
-              <div className="pt-6 mt-6 border-t border-gray-100">
-                <p className="text-lg md:text-xl leading-relaxed">
-                  And this? This is the beautiful part. It's no longer just me.
-                  It's a circle of <strong>over 160,000 kindred spirits</strong>{" "}
-                  across social platforms, with{" "}
-                  <strong>more than 5,600 souls</strong> building something real
-                  in our online home.
+            {/* Six areas - clean text, two columns, no emojis/checkmarks */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3 my-10 text-base md:text-lg">
+              <div className="space-y-2">
+                <p className="font-semibold text-[#E8C547]">
+                  Internal development
                 </p>
+                <p>Physical</p>
+                <p>Mental</p>
+                <p>Spiritual</p>
+              </div>
 
-                <p className="text-lg md:text-xl leading-relaxed mt-6">
-                  We don't just talk about growth.{" "}
-                  <span className="font-semibold italic">
-                    We feel it in our bones.
-                  </span>{" "}
-                  We celebrate the tiny wins, navigate the messy middle, and
-                  show up for each other. We are living proof that change is
-                  possible.
+              <div className="space-y-2">
+                <p className="font-semibold text-[#E8C547]">
+                  External development
                 </p>
-
-                <p className="text-lg md:text-xl leading-relaxed font-semibold italic mt-6 text-center md:text-left">
-                  And if any of this whispers to you, well, your seat at the
-                  table has been waiting.
-                </p>
-
-                <div className="mt-8 space-y-4">
-                  <a
-                    href="https://t.me/+l29gjqbKiYZhMzY0"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4 hover:scale-105 transition-transform w-full justify-center md:w-auto"
-                  >
-                    Take your seat <span>→</span>
-                  </a>
-
-                  <p className="text-base text-muted-foreground italic text-center md:text-left">
-                    The most important journey begins with a single step. Let's
-                    take it together.
-                  </p>
-                </div>
+                <p>Relationships</p>
+                <p>Finances</p>
+                <p>Personal life and independence</p>
               </div>
             </div>
+
+            <p>
+              Real growth happens when these areas develop together. Neglect
+              one, and the rest eventually suffer.
+            </p>
+
+            <p className="font-semibold italic text-xl md:text-2xl my-8 text-[#E8C547]">
+              I was becoming the person I once needed.
+            </p>
+
+            <p>That’s how my YouTube channel was born.</p>
+
+            <p>That’s how Daily Momentum and Day One came to life.</p>
+
+            <p className="font-medium italic text-center mt-12 text-xl border-t border-gray-300/50 pt-10 text-[#E8C547]">
+              This isn’t about perfection.
+              <br />
+              It’s about progress—one intentional day at a time.
+            </p>
           </div>
         </div>
       </div>

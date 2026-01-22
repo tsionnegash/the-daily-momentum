@@ -2,22 +2,24 @@ import communityImg from "@/assets/community.png";
 
 const CommunitySection = () => {
   return (
-    <section className="section-padding bg-secondary">
+    <section className="section-padding bg-[#ebebeb]">
       <div className="container-wide">
         <div className="text-center mb-12">
-          <p className="text-xl mb-2">THE BEST PART?</p>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold">
-            <span className="font-bold">OUR COMMUNITY</span>
+          <p className="text-xl mb-2 text-[#5d222a]">THE BEST PART?</p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#5d222a]">
+            <span className="font-bold text-[#E8C547]">OUR COMMUNITY</span>
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-[#5d222a]">
             <p className="text-base md:text-lg">
-              <strong>The Daily Momentum Community</strong> is a private,
-              supportive space where committed people come together to build
-              consistency and stay accountable every day.
+              <strong className="text-[#E8C547]">
+                The Daily Momentum Community
+              </strong>{" "}
+              is a private, supportive space where committed people come
+              together to build consistency and stay accountable every day.
             </p>
 
             <p className="text-base md:text-lg font-semibold">
@@ -26,28 +28,28 @@ const CommunitySection = () => {
 
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <span className="text-burgundy">•</span>
+                <span className="text-[#5d222a]">•</span>
                 <p>Daily check-ins to share your focus and wins</p>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-burgundy">•</span>
+                <span className="text-[#5d222a]">•</span>
                 <p>
                   Gentle accountability through challenges and partner check-ins
                 </p>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-burgundy">•</span>
+                <span className="text-[#5d222a]">•</span>
                 <p>
                   Direct access to me for questions, feedback, and quick
                   guidance
                 </p>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-burgundy">•</span>
+                <span className="text-[#5d222a]">•</span>
                 <p>Honest conversations about progress and setbacks</p>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-burgundy">•</span>
+                <span className="text-[#5d222a]">•</span>
                 <p>
                   A positive, judgment-free environment where everyone is
                   working toward the same goal

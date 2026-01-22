@@ -53,26 +53,26 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-[#ebebeb]">
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Text Content - Left */}
           <div className="text-center lg:text-left space-y-6">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gold">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#E8C547]">
               CONTACT US
             </h2>
-            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
+            <p className="text-lg md:text-xl text-[#5d222a]/90 leading-relaxed">
               Whether you’re looking for coaching, collaboration, or creative
               strategy — I’d love to hear from you.
             </p>
-            <p className="text-lg md:text-xl font-semibold text-gold">
+            <p className="text-lg md:text-xl font-semibold text-[#5d222a]">
               Let’s create something powerful together.
             </p>
           </div>
 
           {/* Contact Form Card - Right */}
           <div className="max-w-lg mx-auto lg:mx-0">
-            <div className="bg-secondary/50 border border-gold/20 rounded-2xl p-8 md:p-10 shadow-xl">
+            <div className="bg-white/50 border border-[#5d222a]/20 rounded-2xl p-8 md:p-10 shadow-xl">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <Input
                   type="text"
@@ -81,7 +81,7 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="bg-background border-gold/30 focus:border-gold"
+                  className="bg-white border-[#5d222a]/30 focus:border-[#5d222a] focus:ring-[#5d222a]"
                 />
 
                 <Input
@@ -90,7 +90,7 @@ const ContactSection = () => {
                   placeholder="Address (optional)"
                   value={formData.address}
                   onChange={handleChange}
-                  className="bg-background border-gold/30 focus:border-gold"
+                  className="bg-white border-[#5d222a]/30 focus:border-[#5d222a] focus:ring-[#5d222a]"
                 />
 
                 <Input
@@ -99,7 +99,7 @@ const ContactSection = () => {
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="bg-background border-gold/30 focus:border-gold"
+                  className="bg-white border-[#5d222a]/30 focus:border-[#5d222a] focus:ring-[#5d222a]"
                 />
 
                 <Textarea
@@ -109,12 +109,12 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="bg-background border-gold/30 focus:border-gold resize-none"
+                  className="bg-white border-[#5d222a]/30 focus:border-[#5d222a] focus:ring-[#5d222a] resize-none"
                 />
 
                 <Button
                   type="submit"
-                  className="w-full btn-primary text-lg py-6"
+                  className="w-full bg-[#5d222a] hover:bg-[#4a1a22] text-white text-lg py-6"
                 >
                   SEND MESSAGE
                 </Button>
